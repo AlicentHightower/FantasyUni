@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+ <html>
+    <head>
+      <title>Registration Form </title>
+    
+    <style>
+    @font-face {
+    font-family: Medieval;
+    src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+}
+
+
+        body {
+          font-family:Medieval ;
+          background-image: url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1701375160/Aesthetic%20for%20website/wnqgsjhh8c2yrhc4d46p.jpg");
+          background-size: cover;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          cursor: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375159/Aesthetic%20for%20website/aa1wunt2bccyrleb0v5w.cur"), auto;
+        }
+    
+        form {
+          background-image: url("067d0b0985824fc98af2bafc52944fb2.jpg");
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        label {
+          display: block;
+          margin-bottom: 8px;
+        }
+    
+        input {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 16px;
+          box-sizing: border-box;
+        }
+    
+        .error {
+          color: #ff0000;
+          margin-top: -8px;
+          margin-bottom: 16px;
+        }
+    
+        button {
+          background-color: rgb(51, 49, 14);
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+      </style>
+    </head>
+    <body>
+      <form id="registrationForm" onsubmit="validateForm(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <div id="usernameError" class="error"></div>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <div id="passwordError" class="error"></div>
+    
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div id="confirmPasswordError" class="error"></div>
+    
+        <button type="submit">Register</button>
+      </form>
+    
+      <script>
+        function validateForm(event) {
+          event.preventDefault();
+    
+          
+          document.getElementById('usernameError').textContent = '';
+          document.getElementById('emailError').textContent = '';
+          document.getElementById('passwordError').textContent = '';
+          document.getElementById('confirmPasswordError').textContent = '';
+    
+        
+          const username = document.getElementById('username').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const password = document.getElementById('password').value.trim();
+          const confirmPassword = document.getElementById('confirmPassword').value.trim();
+    
+          
+          if (!username) {
+            document.getElementById('usernameError').textContent = 'Username is required';
+            return;
+          }
+    
+          if (!email) {
+            document.getElementById('emailError').textContent = 'Email is required';
+            return;
+          }
+    
+          if (!password) {
+            document.getElementById('passwordError').textContent = 'Password is required';
+            return;
+          }
+    
+          if (password.length < 6) {
+            document.getElementById('passwordError').textContent = 'Password must be at least 6 characters';
+            return;
+          }
+    
+          if (password !== confirmPassword) {
+            document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+            return;
+          }
+    
+         
+          alert('Registration successful!');
+        }
+      </script>
+    </body>
+
+</html>
