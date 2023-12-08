@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff; /* Text color on top of the background */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full height of the viewport */
+    }
+
+    #content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .video-button {
+      display: block;
+      margin: 10px 0;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #3498db; /* Button background color */
+      color: #fff; /* Button text color */
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .video-button:hover {
+      background-color: #2980b9; /* Button background color on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Welcome to Your Video Page</h1>
+
+    <button class="video-button" onclick="playVideo('video1.mp4')">Play Video 1</button>
+    <button class="video-button" onclick="playVideo('video2.mp4')">Play Video 2</button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">Play Video 3</button>
+  </div>
+
+  <script>
+    function playVideo(videoUrl) {
+      // You can customize this function to handle video playback based on your needs.
+      // For simplicity, we're just redirecting to the video URL.
+      window.location.href = videoUrl;
+    }
+  </script>
+
+</body>
+</html>
