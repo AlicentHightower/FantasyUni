@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Page</title>
   <style>
+
+@font-face {
+      font-family: Medieval;
+      src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
-      background-size: cover;
+      background-image: url('https://res.cloudinary.com/dhjdnejbo/image/upload/v1702044276/Aesthetic%20for%20website/rhaeto-romanic-3136455_1280_pfifma.jpg'); 
       font-family: Arial, sans-serif;
-      color: #fff; /* Text color on top of the background */
+      color: #fff; 
       text-align: center;
+      font-family:Medieval;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh; /* Full height of the viewport */
+      height: 100vh; 
     }
 
     #content {
@@ -35,8 +41,8 @@
       margin: 10px 0;
       padding: 15px 30px;
       font-size: 18px;
-      background-color: #3498db; /* Button background color */
-      color: #fff; /* Button text color */
+      background-color: rgb(161, 146, 56); 
+      color: #fff; 
       text-decoration: none;
       border: none;
       border-radius: 5px;
@@ -45,24 +51,28 @@
     }
 
     .video-button:hover {
-      background-color: #2980b9; /* Button background color on hover */
+      background-color: #776e25 ; 
     }
   </style>
 </head>
 <body>
 
   <div id="content">
-    <h1>Welcome to Your Video Page</h1>
+    <h1>Listen to our sermons</h1>
 
-    <button class="video-button" onclick="playVideo('video1.mp4')">Play Video 1</button>
-    <button class="video-button" onclick="playVideo('video2.mp4')">Play Video 2</button>
-    <button class="video-button" onclick="playVideo('video3.mp4')">Play Video 3</button>
+    <button class="video-button" onclick="playVideo('')">The Children of the Forest,the First Men, and the Andals
+    </button>
+    <button class="video-button" onclick="playVideo('video2.mp4')"></button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">3</button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">4</button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">4</button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">4</button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">4</button>
+    <button class="video-button" onclick="playVideo('video3.mp4')">4</button>
   </div>
-
   <script>
     function playVideo(videoUrl) {
-      // You can customize this function to handle video playback based on your needs.
-      // For simplicity, we're just redirecting to the video URL.
+
       window.location.href = videoUrl;
     }
   </script>
