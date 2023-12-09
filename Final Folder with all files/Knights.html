@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Knights</title>
+  <style>
+    @font-face {
+      font-family: Medieval;
+      src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-size: contain;
+      background-image: url('https://res.cloudinary.com/dhjdnejbo/image/upload/v1702153803/AKnightandHisLady_1612_2001_o6xwga.jpg'); 
+      font-family: Arial, sans-serif;
+      color: #fff; 
+      text-align: center;
+      font-family: Medieval;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .btn {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: rgb(161, 146, 56); 
+      color: #ded6d6; 
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #776e25; 
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Tales of Knights and Honour</h1>
+
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic for website/FantasyUni/Final%20Folder%20with%20all%20files/Books/Swan%20-%20King%20Arthur%20and%20the%20Knights%20of%20the%20Round%20Table,%20Level%202,%20Penguin%20Readers-Pearson%20ESL%20(2001).pdf')">King Arthur and the Knights of the Round Table</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/T.%20H.%20White%20-%20The%20Once%20and%20Future%20King%20(1987).pdf')">The Once and Future King</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/(Elite%20Series%2017)%20Christopher%20Gravett,%20Angus%20McBride%20-%20Knights%20at%20Tournament-Osprey%20(1988).pdf')">Knights at Torunaments</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/(General%20Military)%20Christopher%20Gravett%20-%20The%20Normans_%20Warrior%20Knights%20and%20Their%20Castles-Osprey%20Publishing%20(2006).pdf')">Warrior Knights and their Castles</button>
+  </div>
+
+  <script>
+    function downloadPDF(pdfLink) {
+    
+      const link = document.createElement('a');
+      link.href = pdfLink;
+      link.target = '_blank';
+      
+  
+      const filename = pdfLink.substring(pdfLink.lastIndexOf('/') + 1);
+      link.download = filename;
+
+     
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+ <!DOCTYPE html> 
+ <html>
+ <head>
+    <title>Home</title>
+ <style>
+
+ @font-face {
+    font-family: Medieval;
+    src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+}
+
+    body,html {
+        margin: 0%;
+        padding:0%;
+        cursor: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375159/Aesthetic%20for%20website/aa1wunt2bccyrleb0v5w.cur"), auto;
+
+
+    }
+
+
+     #div1 {
+    background-color: bisque;
+    background-image:url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1701375164/Aesthetic%20for%20website/usudbybiiwy759l0ctw8.gif");
+    background-size: cover;
+    margin: 0%;
+
+     }
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height:800px;
+
+      }
+
+.btn { 
+        cursor: pointer; 
+        border: 1px solid yellow; 
+        height: 70px; 
+        width: 200px; 
+        top: 80%;
+        left:45%;
+        position: absolute;
+        color:yellow; 
+        font-size: 1.5em; 
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Medieval;
+
+        
+    }  
+    
+.music {
+    cursor: pointer; 
+        border: 1px solid yellow; 
+        background-color: transparent; 
+        height: 20px; 
+        width:auto; 
+        color:yellow; 
+        font: size 2px; 
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 25%;
+        left:50%;
+        position: absolute;
+        font-family: Medieval;
+
+
+}
+
+ </style>
+</head>
+
+<body>
+
+<div id="div1">
+    <img src="https://res.cloudinary.com/dhjdnejbo/image/upload/v1701375163/Aesthetic%20for%20website/ao9wipdauon0n70uouwa.png" alt="textbox">
+    <a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Final Folder with all files\Home Cards.html" style="text-decoration: none;">
+    <div class="btn">Press here to enter the gates</div>
+</a>
+ </div>
+  
+ <button class="music" onclick="toggleAudio()">Music</button> 
+
+ <script>
+    const audio = new Audio("https://res.cloudinary.com/dhjdnejbo/video/upload/v1701375165/Aesthetic%20for%20website/ggm4ixphppm6tdzzmhzl.mp3");
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+</script>
+
+</body>
+
+
+
+</html>
