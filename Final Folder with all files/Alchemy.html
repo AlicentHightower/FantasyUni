@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Magic</title>
+  <style>
+    @font-face {
+      font-family: Medieval;
+      src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-size: contain;
+      background-image: url('https://res.cloudinary.com/dhjdnejbo/image/upload/v1702158810/alchemy_room_by_sucdeportocale_ddffstg-fullview_fqfban.jpg'); 
+      font-family: Arial, sans-serif;
+      color: #fff; 
+      text-align: center;
+      font-family: Medieval;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .btn {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: rgb(161, 146, 56); 
+      color: #ded6d6; 
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #776e25; 
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Science of Alchemy</h1>
+
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/(Synthesis)%20Principe,%20Lawrence%20-%20The%20Secrets%20of%20Alchemy-The%20University%20of%20Chicago%20Press%20(2013).pdf')">The Secrets of Alchemy</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/Marie-Louise%20Von%20Franz%20-%20Alchemy_%20An%20Introduction%20to%20the%20Symbolism%20and%20the%20Psychology%20(Studies%20in%20Jungian%20Psychology)-Inner%20City%20Books%20(1981).pdf')">Alchemy: An Introduction to the Symbolism and the Psychology</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/Frater%20Albertus%20-%20The%20Alchemist\'s%20Handbook_%20Manual%20for%20Practical%20Laboratory%20Alchemy%20(1976,%20Red%20Wheel%20Weiser)%20-%20libgen.li.pdf')">The Alchemist's Handbook: Manual for Practical Laboratory Alchemy</button>
+  </div>
+
+
+  <script>
+    function downloadPDF(pdfLink) {
+    
+      const link = document.createElement('a');
+      link.href = pdfLink;
+      link.target = '_blank';
+      
+  
+      const filename = pdfLink.substring(pdfLink.lastIndexOf('/') + 1);
+      link.download = filename;
+
+     
+      link.click();
+    }
+
+ </script>
+
+
+</body>
+</html>

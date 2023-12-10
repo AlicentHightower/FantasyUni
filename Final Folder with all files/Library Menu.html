@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
   <title>Library Menu</title>
   <style>
@@ -48,6 +48,28 @@
     .btn:hover {
       background-color: #776e25; 
     }
+
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color:rgb(161, 146, 56) ;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+
   </style>
 </head>
 <body>
@@ -59,23 +81,73 @@
      <button class="btn">Tales of Knights and Honour</button>
   </a>
     
-     <a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Monstery\Houses of Westeros.html" style="text-decoration: none;">
+     <a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Final Folder with all files\Witchcraft.html" style="text-decoration: none;">
     <button class="btn">Witchcraft and Magic</button>
 </a>
 
-    <a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Monstery\Conquest.html" style="text-decoration: none;">
+    <a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Final Folder with all files\Alchemy.html" style="text-decoration: none;">
     <button class="btn">Science of Alchemy</button>
 </a>
 
-    <a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Monstery\The Dance of the Dragons.html" style="text-decoration: none;">
-    <button class="btn">Books on the  general History of Westeros Houses </button>
-</a>
-
-<a href="C:\Users\Fujitsu\Desktop\Aesthetic for website\FantasyUni\Monstery\Old Westeros.html" style="text-decoration: none;">
-  <button class="btn">Armies and Wars</button>
-</a>
 
 </div>
+
+<div id="content">
+  <button class="btn" onclick="startChallenge()">Click and see</button>
+</div>
+
+<div id="riddlePopup" class="popup">
+  <div class="popup-content">
+    <p>Solve the riddle to see a new section:</p>
+    <p>What has keys but can't open locks?</p>
+    <input type="text" id="answerInput" placeholder="Your answer">
+    <button onclick="checkAnswer()">Submit</button>
+  </div>
+</div>
+
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <p>Congratulations! You've solved the riddle.</p>
+    <button onclick="showNextButton()">Continue</button>
+  </div>
+</div>
+
+<script>
+  function downloadPDF(pdfLink) {
+  
+    const link = document.createElement('a');
+    link.href = pdfLink;
+    link.target = '_blank';
+    
+
+    const filename = pdfLink.substring(pdfLink.lastIndexOf('/') + 1);
+    link.download = filename;
+
+   
+    link.click();
+  }
+
+  
+
+  function startChallenge() {
+    document.getElementById('content').style.display = 'none';
+    document.getElementById('riddlePopup').style.display = 'flex';
+  }
+
+  function checkAnswer() {
+    const userAnswer = document.getElementById('answerInput').value.toLowerCase();
+    if (userAnswer === 'piano') {
+      document.getElementById('riddlePopup').style.display = 'none';
+      document.getElementById('successPopup').style.display = 'flex';
+    } else {
+      alert('Wrong answer. Try again!');
+    }
+  }
+
+  function showNextButton() {
+    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  }
+</script>
 
 
 </body>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Magic</title>
+  <style>
+    @font-face {
+      font-family: Medieval;
+      src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-size: contain;
+      background-image: url('https://res.cloudinary.com/dhjdnejbo/image/upload/v1702157831/mage-from-rawpixel-id-12052192-jpeg_smsdse.jpg'); 
+      font-family: Arial, sans-serif;
+      color: #fff; 
+      text-align: center;
+      font-family: Medieval;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .btn {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: rgb(161, 146, 56); 
+      color: #ded6d6; 
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #776e25; 
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <h1>Witchcraft and Magic</h1>
+
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/(Historical%20dictionaries%20of%20religions,%20philosophies,%20and%20movements%2047)%20Michael%20D.%20Bailey%20-%20Historical%20Dictionary%20of%20Witchcraft-Scarecrow%20Press%20(2003).pdf')">Historical Dictionary of Witchcraft</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/Cassandra%20Eason%20-%20A%20Practical%20Guide%20to%20Witchcraft%20and%20Magick%20Spells-Foulsham%20(2001).pdf')">A Practical Guide to Witchcraft and Magick Spells</button>
+    <button class="btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/Silvia%20Federici%20-%20Caliban%20and%20the%20Witch_%20Women,%20the%20Body%20and%20Primitive%20Accumulation-Autonomedia%20(2004).pdf')">Caliban and the Witch</button>
+  </div>
+  
+  <script>
+    function downloadPDF(pdfLink) {
+    
+      const link = document.createElement('a');
+      link.href = pdfLink;
+      link.target = '_blank';
+      
+  
+      const filename = pdfLink.substring(pdfLink.lastIndexOf('/') + 1);
+      link.download = filename;
+
+     
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
