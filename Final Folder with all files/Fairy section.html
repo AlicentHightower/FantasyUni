@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Fairy <Section></Section></title>
+  <style>
+    @font-face {
+      font-family: Medieval;
+      src: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375160/Aesthetic%20for%20website/e2tp3zzhumlo3aqqbet1.ttf");
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-image: url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238343/Silver-Fairy-on-Moon_vygdce.gif"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238343/rightfairy_xif6dj.gif"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702241784/fairyinflowerg_vuvod7.gif"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238343/fairyani_zyee45.gif"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238343/drkfairy_ekavou.gif"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702241785/waterfairyan_togvpd.gif"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238680/tumblr_poirfpeAH71vzldlg_500_yfip2d.jpg"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238680/tumblr_poirfpeAH71vzldlg_500_yfip2d.jpg"),url("https://res.cloudinary.com/dhjdnejbo/image/upload/v1702238422/fantasy-art-landscape-wallpaper-preview_oj4pba.jpg");
+      background-position:right top,right bottom,right bottom -350px,left top,left bottom,left bottom -350px,right top,left top,left top;
+      background-size:auto,auto,auto,auto,auto,auto,200px 1200px,200px 1200px,cover;
+      background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+      font-family: Arial, sans-serif;
+      color: #fff; 
+      text-align: center;
+      font-family: Medieval;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: url("https://res.cloudinary.com/dhjdnejbo/raw/upload/v1701375159/Aesthetic%20for%20website/aa1wunt2bccyrleb0v5w.cur"), auto;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    p {
+    font-size: medium;
+    font-family: Medieval;
+    color: rgb(255, 255, 255);
+ 
+    }
+
+    .f-btn {
+      display: block;
+      margin: 10px 0;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: rgb(67, 75, 236); 
+      color: #ded6d6; 
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .f-btn:hover {
+      background-color: #6097e9; 
+    }
+
+    .r-btn {
+      display: block;
+      margin: 10px 0;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: rgb(67, 75, 236); 
+      color: #ded6d6; 
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .r-btn:hover {
+      background-color: #6097e9; 
+    }
+
+    .video-container {
+      display: none; 
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #video-player {
+      width: 100%;
+      height: 400px;
+    }
+
+    #close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .m-btn {
+      display: block;
+      margin: 10px 0;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: rgb(67, 75, 236); 
+      color: #ded6d6; 
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .m-btn:hover {
+      background-color: #6097e9; 
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>⋆｡°✩ Welcome to Fairy Land ⋆｡°✩</h1>
+  
+    <p>&nbsp </p>
+
+    <p>--------Relax with us--------</p>
+    <button class="f-btn" onclick="playVideo('https://www.youtube.com/embed/_oZkgUJzJnw?')">Learn about us</button>
+    <button class="r-btn" onclick="downloadPDF('C:/Users/Fujitsu/Desktop/Aesthetic%20for%20website/FantasyUni/Final%20Folder%20with%20all%20files/Books/EMILY%20HAWKINS%20-%20A%20Natural%20History%20of%20Fairies%20(2020).pdf')">Read about us</button>
+    <button class="m-btn" onclick="toggleAudio()">Listen to our songs</button> 
+
+  </div>
+
+
+  <div class="video-container" id="video-container">
+    <button id="close-button" onclick="closeVideo()">Close</button>
+    <iframe class="video-player" id="video-player" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function playVideo(videoUrl) {
+      var videoContainer = document.getElementById('video-container');
+      var videoPlayer = document.getElementById('video-player');
+      
+      videoPlayer.src = videoUrl;
+      videoContainer.style.display = 'block';
+    }
+
+    function closeVideo() {
+      var videoContainer = document.getElementById('video-container');
+      var videoPlayer = document.getElementById('video-player');
+      
+      videoPlayer.src = '';
+      videoContainer.style.display = 'none';
+    }
+
+    function downloadPDF(pdfLink) {
+    
+    const link = document.createElement('a');
+    link.href = pdfLink;
+    link.target = '_blank';
+    
+
+    const filename = pdfLink.substring(pdfLink.lastIndexOf('/') + 1);
+    link.download = filename;
+
+   
+    link.click();
+  }
+
+  const audio = new Audio("https://res.cloudinary.com/dhjdnejbo/video/upload/v1702242816/onlymp3.to_-_Evening_Star_the_Eternal_Light_Elvish_Melodies_from_the_Motion_Score_The_Lord_of_the_Rings-3bY0XO0vuZA-192k-1702242790_aq5ppq.mp3");
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+
+  </script>
+
+</body>
+</html>
